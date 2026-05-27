@@ -1,0 +1,224 @@
+{
+  "title": "PokéCup",
+  "subtitle": "Random Battles Tournament",
+  "groups": [
+    {
+      "name": "Group A",
+      "players": [
+        {
+          "name": "David",
+          "wins": 2,
+          "losses": 1,
+          "diff": 0
+        },
+        {
+          "name": "Nathan",
+          "wins": 2,
+          "losses": 1,
+          "diff": 0
+        },
+        {
+          "name": "Shawn",
+          "wins": 2,
+          "losses": 1,
+          "diff": 0
+        },
+        {
+          "name": "Corey",
+          "wins": 0,
+          "losses": 3,
+          "diff": 0
+        }
+      ],
+      "matches": [
+        {
+          "player1": "David",
+          "player2": "Corey",
+          "score": "1-0",
+          "winner": "David",
+          "replay": "https://pokemonshowdown.com/sdgfjhsdg"
+        },
+        {
+          "player1": "Nathan",
+          "player2": "Shawn",
+          "score": "1-0",
+          "winner": "Nathan",
+          "replay": "https://pokemonshowdown.com/sdgfjhsdg"
+        },
+        {
+          "player1": "Shawn",
+          "player2": "Corey",
+          "score": "1-0",
+          "winner": "Shawn",
+          "replay": "https://pokemonshowdown.com/gfjhsdg"
+        }
+      ]
+    },
+    {
+      "name": "Group B",
+      "players": [
+        {
+          "name": "Kesha",
+          "wins": 3,
+          "losses": 0,
+          "diff": 0
+        },
+        {
+          "name": "Kesha 2",
+          "wins": 2,
+          "losses": 1,
+          "diff": 0
+        },
+        {
+          "name": "Kesha 3",
+          "wins": 1,
+          "losses": 2,
+          "diff": 0
+        },
+        {
+          "name": "Kesha 4",
+          "wins": 0,
+          "losses": 3,
+          "diff": 0
+        }
+      ],
+      "matches": []
+    },
+    {
+      "name": "Group C",
+      "players": [
+        {
+          "name": "Baqar",
+          "wins": 2,
+          "losses": 1,
+          "diff": 0
+        },
+        {
+          "name": "Kennedy",
+          "wins": 2,
+          "losses": 1,
+          "diff": 0
+        },
+        {
+          "name": "David",
+          "wins": 2,
+          "losses": 1,
+          "diff": 0
+        },
+        {
+          "name": "Canadian",
+          "wins": 0,
+          "losses": 3,
+          "diff": 0
+        }
+      ],
+      "matches": []
+    },
+    {
+      "name": "Group D",
+      "players": [
+        {
+          "name": "Person 1",
+          "wins": 3,
+          "losses": 0,
+          "diff": 0
+        },
+        {
+          "name": "Person 2",
+          "wins": 1,
+          "losses": 2,
+          "diff": 0
+        },
+        {
+          "name": "Billy",
+          "wins": 1,
+          "losses": 2,
+          "diff": 0
+        },
+        {
+          "name": "Person 4",
+          "wins": 1,
+          "losses": 2,
+          "diff": 0
+        }
+      ],
+      "matches": []
+    }
+  ],
+  "playoffs": {
+    "rounds": [
+      {
+        "name": "Quarterfinals",
+        "matches": [
+          {
+            "slot": "QF1",
+            "player1": "Group A #1",
+            "player2": "Group B #2",
+            "score": "",
+            "winner": ""
+          },
+          {
+            "slot": "QF2",
+            "player1": "Group C #1",
+            "player2": "Group D #2",
+            "score": "",
+            "winner": ""
+          },
+          {
+            "slot": "QF3",
+            "player1": "Group B #1",
+            "player2": "Group A #2",
+            "score": "",
+            "winner": ""
+          },
+          {
+            "slot": "QF4",
+            "player1": "Group D #1",
+            "player2": "Group C #2",
+            "score": "",
+            "winner": ""
+          }
+        ]
+      },
+      {
+        "name": "Semifinals",
+        "matches": [
+          {
+            "slot": "SF1",
+            "player1": "Winner QF1",
+            "player2": "Winner QF2",
+            "score": "",
+            "winner": ""
+          },
+          {
+            "slot": "SF2",
+            "player1": "Winner QF3",
+            "player2": "Winner QF4",
+            "score": "",
+            "winner": ""
+          }
+        ]
+      },
+      {
+        "name": "Grand Finals",
+        "matches": [
+          {
+            "slot": "GF",
+            "player1": "Winner SF1",
+            "player2": "Winner SF2",
+            "score": "",
+            "winner": ""
+          }
+        ]
+      }
+    ]
+  },
+  "championship": {
+    "title": "Championship Match",
+    "player1": "Winner of Grand Finals",
+    "player2": "Hannah",
+    "score": "",
+    "winner": "",
+    "replay": ""
+  }
+}
