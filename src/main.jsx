@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
 
-const tabs = ['Group Stage', 'Playoffs', 'Championship Match'];
+const tabs = ['Group Stage', 'Playoffs'];
 
 function App() {
   const [activeTab, setActiveTab] = useState('Group Stage');
@@ -46,7 +46,6 @@ function App() {
 
       {activeTab === 'Group Stage' && <GroupStage groups={data.groups} />}
       {activeTab === 'Playoffs' && <PlayoffBracket playoffs={data.playoffs} />}
-      {activeTab === 'Championship Match' && <Championship championship={data.championship} />}
     </main>
   );
 }
