@@ -205,3 +205,28 @@ th { color: #6b7280; font-size: 0.8rem; text-transform: uppercase; letter-spacin
   font-size: 0.9rem;
   color: #667085;
 }
+.pickems-page {
+  display: grid;
+  gap: 18px;
+}
+
+.pickems-list {
+  display: grid;
+  gap: 10px;
+}
+
+.pickems-player {
+  border: 1px solid #dfe4ef;
+  background: #fafbff;
+  border-radius: 14px;
+  padding: 12px;
+  font-weight: 900;
+  cursor: pointer;
+  text-align: left;
+}
+
+.pickems-player.selected {
+  background: #f1fff5;
+  border-color: #22a45a;
+  outline: 2px solid #22a45a;
+}

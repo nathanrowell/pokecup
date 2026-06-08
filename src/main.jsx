@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
 
-const tabs = ['Group Stage', 'Playoffs'];
+const tabs = ['Group Stage', 'Playoffs', 'Pick Ems'];
 
 function App() {
   const [activeTab, setActiveTab] = useState('Group Stage');
@@ -46,6 +46,7 @@ function App() {
 
       {activeTab === 'Group Stage' && <GroupStage groups={data.groups} />}
       {activeTab === 'Playoffs' && <PlayoffBracket playoffs={data.playoffs} />}
+      {activeTab === 'Pick Ems' && <PickEms groups={data.groups} />}
     </main>
   );
 }
@@ -200,5 +201,68 @@ function Championship({ championship }) {
     </section>
   );
 }
+function PickEms({ groups }) {
+  const [picks, setPicks] = useState({});
 
+  function togglePick(groupName, playerName) {
+    setPicks((current) => {
+      const groupPicks = current[groupName] || [];
+      const alreadyPicked = groupPicks.includes(playerName);
+
+      if (alreadyPicked) {
+        return {
+          ...current,
+          [groupName]: groupPicks.filter((name) => name !== playerName)
+        };
+      }
+
+      if (groupPicks.length >= 2) return current;
+
+      return {
+        ...current,
+        [groupName]: [...groupPicks, playerName]
+      };
+    });
+  }
+
+  return (
+    <section className="pickems-page">
+      <article className="card">
+        <h2>Pick ’Ems</h2>
+        <p className="muted">Pick 2 players from each group to advance.</p>
+      </article>
+
+      <div className="grid groups-grid">
+        {groups.map((group) => {
+          const groupPicks = picks[group.name] || [];
+
+          return (
+            <article className="card" key={group.name}>
+              <div className="card-title-row">
+                <h2>{group.name}</h2>
+                <span className="qualifier-note">{groupPicks.length}/2 picked</span>
+              </div>
+
+              <div className="pickems-list">
+                {group.players.map((player) => {
+                  const selected = groupPicks.includes(player.name);
+
+                  return (
+                    <button
+                      key={player.name}
+                      className={`pickems-player ${selected ? 'selected' : ''}`}
+                      onClick={() => togglePick(group.name, player.name)}
+                    >
+                      {player.name}
+                    </button>
+                  );
+                })}
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
 createRoot(document.getElementById('root')).render(<App />);
