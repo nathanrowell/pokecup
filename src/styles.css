@@ -230,3 +230,41 @@ th { color: #6b7280; font-size: 0.8rem; text-transform: uppercase; letter-spacin
   border-color: #22a45a;
   outline: 2px solid #22a45a;
 }
+.pickems-report {
+  text-align: center;
+  padding: 18px;
+}
+
+.pickems-report h2 {
+  margin-bottom: 14px;
+}
+
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.report-group {
+  background: white;
+  border: 1px solid #dfe4ef;
+  border-radius: 14px;
+  padding: 12px;
+  text-align: center;
+}
+
+.report-group h3 {
+  margin: 0 0 6px;
+}
+
+.report-group p {
+  margin: 0;
+  font-weight: 900;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 520px) {
+  .report-grid {
+    grid-template-columns: 1fr;
+  }
+}

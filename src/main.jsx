@@ -225,6 +225,9 @@ function PickEms({ groups }) {
     });
   }
 
+  const totalPicks = Object.values(picks).flat().length;
+  const finished = totalPicks === groups.length * 2;
+
   return (
     <section className="pickems-page">
       <article className="card">
@@ -262,6 +265,21 @@ function PickEms({ groups }) {
           );
         })}
       </div>
+
+      {finished && (
+        <article className="card pickems-report">
+          <h2>Your Picks:</h2>
+
+          <div className="report-grid">
+            {groups.map((group) => (
+              <div className="report-group" key={`${group.name}-report`}>
+                <h3>{group.name}</h3>
+                <p>{(picks[group.name] || []).join(' ♦ ')}</p>
+              </div>
+            ))}
+          </div>
+        </article>
+      )}
     </section>
   );
 }
