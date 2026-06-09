@@ -39,8 +39,8 @@
       "players": [
         { "name": "Tiara", "wins": 2, "losses": 1, "diff": -2 },
         { "name": "Baqar", "wins": 1, "losses": 1, "diff": 0 },
-        { "name": "David", "wins": 0, "losses": 1, "diff": -1 },
-        { "name": "Aleksi", "wins": 1, "losses": 1, "diff": 3 }
+        { "name": "David", "wins": 0, "losses": 2, "diff": -4 },
+        { "name": "Aleksi", "wins": 2, "losses": 1, "diff": 7 }
       ],
       "matches": [
         {
@@ -70,6 +70,13 @@
       "score": "1-0",
       "winner": "Tiara",
       "replay": "https://replay.pokemonshowdown.com/gen9randombattle-2628162750"
+    },
+    {
+      "player1": "Aleksi",
+      "player2": "David",
+      "score": "4-0",
+      "winner": "Aleksi",
+      "replay": "https://replay.pokemonshowdown.com/gen9randombattle-2628678969"
     }
       ]
     },
