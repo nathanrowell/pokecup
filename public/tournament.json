@@ -82,8 +82,8 @@
       "players": [
         { "name": "Hannah", "wins": 0, "losses": 0, "diff": 0 },
         { "name": "Josh", "wins": 0, "losses": 1, "diff": -2 },
-        { "name": "Skye", "wins": 0, "losses": 0, "diff": 0 },
-        { "name": "Bella", "wins": 1, "losses": 0, "diff": 2 }
+        { "name": "Skye", "wins": 0, "losses": 1, "diff": -1 },
+        { "name": "Bella", "wins": 2, "losses": 0, "diff": 2 }
       ],
       "matches": [
         {
@@ -92,6 +92,13 @@
       "score": "2-0",
       "winner": "Bella",
       "replay": "https://replay.pokemonshowdown.com/gen9randombattle-2627982053"
+    },
+    {
+      "player1": "Bella",
+      "player2": "Skye",
+      "score": "1-0",
+      "winner": "Bella",
+      "replay": "https://replay.pokemonshowdown.com/gen9randombattle-2628581265-91m5p0yqsrqgrntyh9j9neyw35h5d88pw"
     }
       ]
     }
