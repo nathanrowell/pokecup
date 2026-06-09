@@ -145,12 +145,19 @@ function MatchHistoryItem({ match }) {
 
 function PlayoffBracket({ playoffs }) {
   const rounds = playoffs.rounds;
+
   return (
-    <section className="bracket-board">
-      {rounds.map((round, roundIndex) => (
-        <div className="bracket-column" key={round.name}>
+    <section className="bracket-board double-elim-bracket">
+      {rounds.map((round) => (
+        <div
+          className={`bracket-column bracket-${round.name
+            .toLowerCase()
+            .replaceAll(' ', '-')
+            .replaceAll('/', '')}`}
+          key={round.name}
+        >
           <h2>{round.name}</h2>
-          <div className={`bracket-matches round-${roundIndex + 1}`}>
+          <div className="bracket-matches">
             {round.matches.map((match) => (
               <BracketMatch key={match.slot} match={match} />
             ))}
