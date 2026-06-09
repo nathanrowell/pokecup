@@ -15,12 +15,20 @@
     {
       "name": "Group B",
       "players": [
-        { "name": "Tiara", "wins": 0, "losses": 0, "diff": 0 },
-        { "name": "Baqar", "wins": 0, "losses": 0, "diff": 0 },
+        { "name": "Tiara", "wins": 1, "losses": 0, "diff": 2 },
+        { "name": "Baqar", "wins": 0, "losses": 1, "diff": -2 },
         { "name": "David", "wins": 0, "losses": 0, "diff": 0 },
         { "name": "Aleksi", "wins": 0, "losses": 0, "diff": 0 }
       ],
-      "matches": []
+      "matches": [
+        {
+      "player1": "Tiara",
+      "player2": "Baqar",
+      "score": "1-0",
+      "winner": "Tiara",
+      "replay": "https://replay.pokemonshowdown.com/gen9randombattle-2627995636"
+    }
+      ]
     },
     {
       "name": "Group C",
@@ -36,11 +44,19 @@
       "name": "Group D",
       "players": [
         { "name": "Hannah", "wins": 0, "losses": 0, "diff": 0 },
-        { "name": "Josh", "wins": 0, "losses": 0, "diff": 0 },
+        { "name": "Josh", "wins": 0, "losses": 1, "diff": -2 },
         { "name": "Skye", "wins": 0, "losses": 0, "diff": 0 },
-        { "name": "Bella", "wins": 0, "losses": 0, "diff": 0 }
+        { "name": "Bella", "wins": 1, "losses": 0, "diff": 2 }
       ],
-      "matches": []
+      "matches": [
+        {
+      "player1": "Bella",
+      "player2": "Josh",
+      "score": "1-0",
+      "winner": "Bella",
+      "replay": "https://replay.pokemonshowdown.com/gen9randombattle-2627982053"
+    }
+      ]
     }
   ],
   "playoffs": {
