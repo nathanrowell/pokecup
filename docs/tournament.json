@@ -23,9 +23,9 @@
     {
       "name": "Group B",
       "players": [
-        { "name": "Tiara", "wins": 1, "losses": 1, "diff": -3 },
+        { "name": "Tiara", "wins": 2, "losses": 1, "diff": -2 },
         { "name": "Baqar", "wins": 1, "losses": 1, "diff": 0 },
-        { "name": "David", "wins": 0, "losses": 0, "diff": 0 },
+        { "name": "David", "wins": 0, "losses": 1, "diff": -1 },
         { "name": "Aleksi", "wins": 1, "losses": 1, "diff": 3 }
       ],
       "matches": [
@@ -49,6 +49,13 @@
       "score": "5-0",
       "winner": "Aleksi",
       "replay": "https://replay.pokemonshowdown.com/gen9randombattle-2628037134"
+    },
+    {
+      "player1": "David",
+      "player2": "Tiara",
+      "score": "1-0",
+      "winner": "Tiara",
+      "replay": "https://replay.pokemonshowdown.com/gen9randombattle-2628162750"
     }
       ]
     },
