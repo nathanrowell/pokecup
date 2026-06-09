@@ -81,8 +81,8 @@
       "name": "Group D",
       "players": [
         { "name": "Hannah", "wins": 0, "losses": 0, "diff": 0 },
-        { "name": "Josh", "wins": 0, "losses": 1, "diff": -2 },
-        { "name": "Skye", "wins": 0, "losses": 1, "diff": -1 },
+        { "name": "Josh", "wins": 0, "losses": 2, "diff": -5 },
+        { "name": "Skye", "wins": 1, "losses": 1, "diff": 2 },
         { "name": "Bella", "wins": 2, "losses": 0, "diff": 3 }
       ],
       "matches": [
