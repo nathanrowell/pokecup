@@ -6,9 +6,9 @@
       "name": "Group A",
       "players": [
         { "name": "Fabian", "wins": 1, "losses": 2, "diff": -5 },
-        { "name": "Shawn", "wins": 0, "losses": 1, "diff": 0 },
+        { "name": "Shawn", "wins": 1, "losses": 1, "diff": 3 },
         { "name": "Luke", "wins": 2, "losses": 0, "diff": 8 },
-        { "name": "Misty", "wins": 1, "losses": 1, "diff": -3 }
+        { "name": "Misty", "wins": 1, "losses": 2, "diff": -6 }
       ],
       "matches": [
         {
@@ -38,6 +38,13 @@
       "score": "2-0",
       "winner": "Misty",
       "replay": "https://replay.pokemonshowdown.com/gen9randombattle-2628679640"
+    },
+    {
+      "player1": "Misty",
+      "player2": "Shawn",
+      "score": "3-0",
+      "winner": "Misty",
+      "replay": "https://replay.pokemonshowdown.com/gen9randombattle-2628689862"
     }
       ]
     },
