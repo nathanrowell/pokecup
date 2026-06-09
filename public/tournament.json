@@ -5,10 +5,10 @@
     {
       "name": "Group A",
       "players": [
-        { "name": "Fabian", "wins": 1, "losses": 1, "diff": -5 },
+        { "name": "Fabian", "wins": 1, "losses": 2, "diff": -5 },
         { "name": "Shawn", "wins": 0, "losses": 1, "diff": 0 },
         { "name": "Luke", "wins": 2, "losses": 0, "diff": 8 },
-        { "name": "Misty", "wins": 0, "losses": 1, "diff": -3 }
+        { "name": "Misty", "wins": 1, "losses": 1, "diff": -3 }
       ],
       "matches": [
         {
