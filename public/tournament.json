@@ -5,12 +5,20 @@
     {
       "name": "Group A",
       "players": [
-        { "name": "Fabian", "wins": 0, "losses": 0, "diff": 0 },
+        { "name": "Fabian", "wins": 0, "losses": 1, "diff": -3 },
         { "name": "Shawn", "wins": 0, "losses": 0, "diff": 0 },
-        { "name": "Luke", "wins": 0, "losses": 0, "diff": 0 },
+        { "name": "Luke", "wins": 1, "losses": 0, "diff": 3 },
         { "name": "Misty", "wins": 0, "losses": 0, "diff": 0 }
       ],
-      "matches": []
+      "matches": [
+        {
+      "player1": "Luke",
+      "player2": "Fabian",
+      "score": "3-0",
+      "winner": "Luke",
+      "replay": "https://replay.pokemonshowdown.com/gen9randombattle-2628106776"
+    }
+      ]
     },
     {
       "name": "Group B",
