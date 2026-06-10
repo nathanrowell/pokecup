@@ -214,9 +214,9 @@
         "name": "Quarterfinals",
         "matches": [
           { "slot": "QF1", "player1": "Luke", "player2": "Baqar", "score": "", "winner": "" },
-          { "slot": "QF2", "player1": "Group C #1", "player2": "Group D #2", "score": "", "winner": "" },
+          { "slot": "QF2", "player1": "Billy", "player2": "Group D #2", "score": "", "winner": "" },
           { "slot": "QF3", "player1": "Aleksi", "player2": "Shawn", "score": "", "winner": "" },
-          { "slot": "QF4", "player1": "Group D #1", "player2": "Group C #2", "score": "", "winner": "" }
+          { "slot": "QF4", "player1": "Group D #1", "player2": "Nathan", "score": "", "winner": "" }
         ]
       },
       {
