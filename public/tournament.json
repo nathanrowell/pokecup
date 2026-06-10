@@ -114,7 +114,7 @@
         { "name": "Billy", "wins": 2, "losses": 0, "diff": 3 },
         { "name": "Nathan", "wins": 2, "losses": 1, "diff": 3 },
         { "name": "Kesha", "wins": 0, "losses": 3, "diff": -7 },
-        { "name": "Molly", "wins": 1, "losses": 1, "diff": -1 }
+        { "name": "Molly", "wins": 1, "losses": 1, "diff": 1 }
       ],
       "matches": [
         {
