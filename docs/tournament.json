@@ -111,10 +111,10 @@
     {
       "name": "Group C",
       "players": [
-        { "name": "Billy", "wins": 2, "losses": 0, "diff": 3 },
+        { "name": "Billy", "wins": 3, "losses": 0, "diff": 7 },
         { "name": "Nathan", "wins": 2, "losses": 1, "diff": 3 },
         { "name": "Kesha", "wins": 0, "losses": 3, "diff": -7 },
-        { "name": "Molly", "wins": 1, "losses": 1, "diff": 1 }
+        { "name": "Molly", "wins": 1, "losses": 2, "diff": -3 }
       ],
       "matches": [
         {
@@ -151,6 +151,13 @@
       "score": "2-0",
       "winner": "Billy",
       "replay": "https://replay.pokemonshowdown.com/gen9randombattle-2628865246"
+    },
+    {
+      "player1": "Billy",
+      "player2": "Molly",
+      "score": "4-0",
+      "winner": "Billy",
+      "replay": "https://replay.pokemonshowdown.com/gen9randombattle-2628892555"
     }
       ]
     },
