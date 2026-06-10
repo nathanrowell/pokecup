@@ -129,10 +129,10 @@
     {
       "name": "Group D",
       "players": [
-        { "name": "Hannah", "wins": 0, "losses": 1, "diff": -3 },
+        { "name": "Hannah", "wins": 1, "losses": 1, "diff": 2 },
         { "name": "Josh", "wins": 1, "losses": 2, "diff": -2 },
         { "name": "Skye", "wins": 1, "losses": 1, "diff": 2 },
-        { "name": "Bella", "wins": 2, "losses": 0, "diff": 3 }
+        { "name": "Bella", "wins": 2, "losses": 1, "diff": -2 }
       ],
       "matches": [
         {
@@ -162,6 +162,13 @@
       "score": "3-0",
       "winner": "Josh",
       "replay": "https://replay.pokemonshowdown.com/gen9randombattle-2628731449"
+    },
+    {
+      "player1": "Bella",
+      "player2": "Hannah",
+      "score": "5-0",
+      "winner": "Bella",
+      "replay": "https://replay.pokemonshowdown.com/gen9randombattle-2628748637"
     }
       ]
     }
