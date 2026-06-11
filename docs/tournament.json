@@ -220,23 +220,23 @@
       {
         "name": "Quarterfinals",
         "matches": [
-          { "slot": "QF1", "player1": "Luke", "player2": "Baqar", "score": "", "winner": "" },
-          { "slot": "QF2", "player1": "Billy", "player2": "Skye", "score": "", "winner": "" },
-          { "slot": "QF3", "player1": "Aleksi", "player2": "Shawn", "score": "", "winner": "" },
-          { "slot": "QF4", "player1": "Bella", "player2": "Nathan", "score": "", "winner": "" }
+          { "slot": "QF1", "player1": "Luke", "player2": "Baqar", "score": "", "winner": "", "replay": "" },
+          { "slot": "QF2", "player1": "Billy", "player2": "Skye", "score": "", "winner": "", "replay": "" },
+          { "slot": "QF3", "player1": "Aleksi", "player2": "Shawn", "score": "", "winner": "", "replay": "" },
+          { "slot": "QF4", "player1": "Bella", "player2": "Nathan", "score": "", "winner": "", "replay": "" }
         ]
       },
       {
         "name": "Semifinals",
         "matches": [
-          { "slot": "SF1", "player1": "Winner QF1", "player2": "Winner QF2", "score": "", "winner": "" },
-          { "slot": "SF2", "player1": "Winner QF3", "player2": "Winner QF4", "score": "", "winner": "" }
+          { "slot": "SF1", "player1": "Winner QF1", "player2": "Winner QF2", "score": "", "winner": "", "replay": "" },
+          { "slot": "SF2", "player1": "Winner QF3", "player2": "Winner QF4", "score": "", "winner": "", "replay": "" }
         ]
       },
       {
         "name": "Grand Finals",
         "matches": [
-          { "slot": "GF", "player1": "Winner SF1", "player2": "Winner SF2", "score": "", "winner": "" }
+          { "slot": "GF", "player1": "Winner SF1", "player2": "Winner SF2", "score": "", "winner": "", "replay": "" }
         ]
       }
     ]

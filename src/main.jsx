@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
 
-const tabs = ['Group Stage', 'Playoffs', 'Pick Ems'];
+const tabs = ['Group Stage', 'Playoffs', 'Pick Ems', 'Playoff Pick Ems'];
 
 function App() {
   const [activeTab, setActiveTab] = useState('Group Stage');
@@ -47,6 +47,7 @@ function App() {
       {activeTab === 'Group Stage' && <GroupStage groups={data.groups} />}
       {activeTab === 'Playoffs' && <PlayoffBracket playoffs={data.playoffs} />}
       {activeTab === 'Pick Ems' && <PickEms groups={data.groups} />}
+      {activeTab === 'Playoff Pick Ems' && <PlayoffPickEms playoffs={data.playoffs} />}
     </main>
   );
 }
@@ -135,7 +136,23 @@ function MatchHistoryItem({ match }) {
         <strong>{match.player1}</strong> vs <strong>{match.player2}</strong>
       </div>
       <div className="history-meta">
-        <span>{match.score || 'TBD'}</span>
+        <div className="history-meta">
+          <span>{match.score || 'Score TBD'}</span>
+
+          {match.winner && (
+            <span>Winner: {match.winner}</span>
+          )}
+
+          {match.replay && (
+            <a
+              href={match.replay}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Replay
+            </a>
+          )}
+        </div>
         <span>Winner: {match.winner || 'TBD'}</span>
         {match.replay && <a href={match.replay} target="_blank" rel="noreferrer">Replay</a>}
       </div>
@@ -172,9 +189,20 @@ function BracketMatch({ match }) {
   return (
     <div className="bracket-match">
       <div className="match-label">{match.slot}</div>
-      <PlayerLine name={match.player1} winner={match.winner} score={match.score} />
-      <PlayerLine name={match.player2} winner={match.winner} score={match.score} />
-      <div className="match-result">{match.score || 'Score TBD'}</div>
+      <PlayerLine name={match.player1} winner={match.winner} />
+      <PlayerLine name={match.player2} winner={match.winner} />
+
+      <div className="history-meta">
+        <span>{match.score || 'Score TBD'}</span>
+
+        {match.winner && <span>Winner: {match.winner}</span>}
+
+        {match.replay && (
+          <a href={match.replay} target="_blank" rel="noreferrer">
+            Replay
+          </a>
+        )}
+      </div>
     </div>
   );
 }
@@ -288,6 +316,161 @@ function PickEms({ groups }) {
         </article>
       )}
     </section>
+  );
+}
+function PlayoffPickEms({ playoffs }) {
+  const qfMatches = playoffs.rounds[0].matches;
+
+  const [qfPicks, setQfPicks] = useState({});
+  const [sfPicks, setSfPicks] = useState({});
+  const [champion, setChampion] = useState('');
+
+  function pickQF(slot, player) {
+    setQfPicks((current) => {
+      const updated = { ...current, [slot]: player };
+
+      setSfPicks((sfCurrent) => {
+        const next = { ...sfCurrent };
+
+        if (slot === 'QF1' || slot === 'QF2') {
+          delete next.SF1;
+        }
+
+        if (slot === 'QF3' || slot === 'QF4') {
+          delete next.SF2;
+        }
+
+        return next;
+      });
+
+      setChampion('');
+
+      return updated;
+    });
+  }
+
+  function pickSF(slot, player) {
+    setSfPicks((current) => {
+      const updated = { ...current, [slot]: player };
+      setChampion('');
+      return updated;
+    });
+  }
+
+  const sf1Players = [qfPicks.QF1, qfPicks.QF2].filter(Boolean);
+  const sf2Players = [qfPicks.QF3, qfPicks.QF4].filter(Boolean);
+  const gfPlayers = [sfPicks.SF1, sfPicks.SF2].filter(Boolean);
+
+  const finished = qfPicks.QF1 && qfPicks.QF2 && qfPicks.QF3 && qfPicks.QF4 && sfPicks.SF1 && sfPicks.SF2 && champion;
+
+  return (
+    <section className="pickems-page">
+      <article className="card">
+        <h2>Playoff Pick ’Ems</h2>
+        <p className="muted">Pick each matchup winner to build your playoff bracket.</p>
+      </article>
+
+      <section className="bracket-board double-elim-bracket playoff-pickems-bracket">
+        <div className="bracket-column bracket-quarterfinals">
+          <h2>Quarterfinals</h2>
+          <div className="bracket-matches">
+            {qfMatches.map((match) => (
+              <PickemsBracketMatch
+                key={match.slot}
+                slot={match.slot}
+                players={[match.player1, match.player2]}
+                picked={qfPicks[match.slot]}
+                onPick={(player) => pickQF(match.slot, player)}
+              />
+            ))}
+          </div>
+        </div>
+
+        <div className="bracket-column bracket-semifinals">
+          <h2>Semifinals</h2>
+          <div className="bracket-matches">
+            <PickemsBracketMatch
+              slot="SF1"
+              players={sf1Players.length === 2 ? sf1Players : ['Winner QF1', 'Winner QF2']}
+              picked={sfPicks.SF1}
+              disabled={sf1Players.length < 2}
+              onPick={(player) => pickSF('SF1', player)}
+            />
+
+            <PickemsBracketMatch
+              slot="SF2"
+              players={sf2Players.length === 2 ? sf2Players : ['Winner QF3', 'Winner QF4']}
+              picked={sfPicks.SF2}
+              disabled={sf2Players.length < 2}
+              onPick={(player) => pickSF('SF2', player)}
+            />
+          </div>
+        </div>
+
+        <div className="bracket-column bracket-grand-finals">
+          <h2>Grand Finals</h2>
+          <div className="bracket-matches">
+            <PickemsBracketMatch
+              slot="GF"
+              players={gfPlayers.length === 2 ? gfPlayers : ['Winner SF1', 'Winner SF2']}
+              picked={champion}
+              disabled={gfPlayers.length < 2}
+              onPick={setChampion}
+            />
+          </div>
+        </div>
+      </section>
+
+      {finished && (
+        <article className="card pickems-report">
+          <h2>Your Playoff Picks:</h2>
+
+          <div className="report-grid">
+            <div className="report-group">
+              <h3>Quarterfinals</h3>
+              <p>QF1: {qfPicks.QF1}</p>
+              <p>QF2: {qfPicks.QF2}</p>
+              <p>QF3: {qfPicks.QF3}</p>
+              <p>QF4: {qfPicks.QF4}</p>
+            </div>
+
+            <div className="report-group">
+              <h3>Semifinals</h3>
+              <p>SF1: {sfPicks.SF1}</p>
+              <p>SF2: {sfPicks.SF2}</p>
+            </div>
+
+            <div className="report-group">
+              <h3>Champion</h3>
+              <p>{champion}</p>
+            </div>
+          </div>
+        </article>
+      )}
+    </section>
+  );
+}
+
+function PickemsBracketMatch({ slot, players, picked, onPick, disabled = false }) {
+  return (
+    <div className={`bracket-match ${disabled ? 'disabled-match' : ''}`}>
+      <div className="match-label">{slot}</div>
+
+      {players.map((player) => (
+        <button
+          key={player}
+          className={`pickems-bracket-player ${picked === player ? 'selected' : ''}`}
+          onClick={() => !disabled && onPick(player)}
+          disabled={disabled}
+        >
+          {picked === player ? `✓ ${player}` : player}
+        </button>
+      ))}
+
+      <div className="match-result">
+        {picked ? `Winner: ${picked}` : disabled ? 'Pick previous round first' : 'Pick a winner'}
+      </div>
+    </div>
   );
 }
 createRoot(document.getElementById('root')).render(<App />);
