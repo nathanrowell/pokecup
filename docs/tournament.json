@@ -164,9 +164,9 @@
     {
       "name": "Group D",
       "players": [
-        { "name": "Hannah", "wins": 1, "losses": 1, "diff": 2 },
+        { "name": "Hannah", "wins": 1, "losses": 2, "diff": 0 },
         { "name": "Josh", "wins": 1, "losses": 2, "diff": -2 },
-        { "name": "Skye", "wins": 1, "losses": 1, "diff": 2 },
+        { "name": "Skye", "wins": 2, "losses": 1, "diff": 4 },
         { "name": "Bella", "wins": 2, "losses": 1, "diff": -2 }
       ],
       "matches": [
@@ -204,6 +204,13 @@
       "score": "5-0",
       "winner": "Bella",
       "replay": "https://replay.pokemonshowdown.com/gen9randombattle-2628748637"
+    },
+    {
+      "player1": "Skye",
+      "player2": "Hannah",
+      "score": "2-0",
+      "winner": "Skye",
+      "replay": "https://replay.pokemonshowdown.com/gen9randombattle-2629207022-vt3uxsb3rxkgwivf6jh192kmnv8u7b6pw"
     }
       ]
     }
@@ -214,9 +221,9 @@
         "name": "Quarterfinals",
         "matches": [
           { "slot": "QF1", "player1": "Luke", "player2": "Baqar", "score": "", "winner": "" },
-          { "slot": "QF2", "player1": "Billy", "player2": "Group D #2", "score": "", "winner": "" },
+          { "slot": "QF2", "player1": "Billy", "player2": "Skye", "score": "", "winner": "" },
           { "slot": "QF3", "player1": "Aleksi", "player2": "Shawn", "score": "", "winner": "" },
-          { "slot": "QF4", "player1": "Group D #1", "player2": "Nathan", "score": "", "winner": "" }
+          { "slot": "QF4", "player1": "Bella", "player2": "Nathan", "score": "", "winner": "" }
         ]
       },
       {
