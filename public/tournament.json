@@ -223,14 +223,14 @@
           { "slot": "QF1", "player1": "Luke", "player2": "Baqar", "score": "4-0", "winner": "Luke", "replay": "https://replay.pokemonshowdown.com/gen9randombattle-2630301721" },
           { "slot": "QF2", "player1": "Billy", "player2": "Skye", "score": "", "winner": "", "replay": "" },
           { "slot": "QF3", "player1": "Aleksi", "player2": "Shawn", "score": "", "winner": "", "replay": "" },
-          { "slot": "QF4", "player1": "Bella", "player2": "Nathan", "score": "", "winner": "", "replay": "" }
+          { "slot": "QF4", "player1": "Bella", "player2": "Nathan", "score": "1-0", "winner": "Nathan", "replay": "https://replay.pokemonshowdown.com/gen9randombattle-2630362714" }
         ]
       },
       {
         "name": "Semifinals",
         "matches": [
           { "slot": "SF1", "player1": "Luke", "player2": "Winner QF2", "score": "", "winner": "", "replay": "" },
-          { "slot": "SF2", "player1": "Winner QF3", "player2": "Winner QF4", "score": "", "winner": "", "replay": "" }
+          { "slot": "SF2", "player1": "Winner QF3", "player2": "Nathan", "score": "", "winner": "", "replay": "" }
         ]
       },
       {
