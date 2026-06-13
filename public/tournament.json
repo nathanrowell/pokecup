@@ -236,7 +236,7 @@
       {
         "name": "Grand Finals",
         "matches": [
-          { "slot": "GF", "player1": "Winner SF1", "player2": "Winner SF2", "score": "", "winner": "", "replay": "" }
+          { "slot": "GF", "player1": "Winner SF1", "player2": "Aleksi", "score": "", "winner": "", "replay": "" }
         ]
       }
     ]
