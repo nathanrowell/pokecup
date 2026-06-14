@@ -229,14 +229,14 @@
       {
         "name": "Semifinals",
         "matches": [
-          { "slot": "SF1", "player1": "Luke", "player2": "Skye", "score": "", "winner": "", "replay": "" },
+          { "slot": "SF1", "player1": "Luke", "player2": "Skye", "score": "3-0", "winner": "Luke", "replay": "https://replay.pokemonshowdown.com/gen9randombattle-2631546101-vs6nrht7op1g0c6fu7hspvjkjn0opblpw" },
           { "slot": "SF2", "player1": "Aleksi", "player2": "Nathan", "score": "1-0", "winner": "Aleksi", "replay": "https://replay.pokemonshowdown.com/gen9randombattle-2630932871" }
         ]
       },
       {
         "name": "Grand Finals",
         "matches": [
-          { "slot": "GF", "player1": "Winner SF1", "player2": "Aleksi", "score": "", "winner": "", "replay": "" }
+          { "slot": "GF", "player1": "Luke", "player2": "Aleksi", "score": "", "winner": "", "replay": "" }
         ]
       }
     ]
