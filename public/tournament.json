@@ -236,7 +236,7 @@
       {
         "name": "Grand Finals",
         "matches": [
-          { "slot": "GF", "player1": "Luke", "player2": "Aleksi", "score": "", "winner": "", "replay": "" }
+          { "slot": "GF", "player1": "Luke", "player2": "Aleksi", "score": "BO3 2-0", "winner": "Aleksi", "replays": ["https://replay.pokemonshowdown.com/gen9randombattle-2631797822", "https://replay.pokemonshowdown.com/gen9randombattle-2631800827"] }
         ]
       }
     ]

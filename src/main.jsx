@@ -135,26 +135,23 @@ function MatchHistoryItem({ match }) {
       <div>
         <strong>{match.player1}</strong> vs <strong>{match.player2}</strong>
       </div>
+
       <div className="history-meta">
-        <div className="history-meta">
-          <span>{match.score || 'Score TBD'}</span>
+        <span>{match.score || 'Score TBD'}</span>
 
-          {match.winner && (
-            <span>Winner: {match.winner}</span>
-          )}
+        {match.winner && <span>Winner: {match.winner}</span>}
 
-          {match.replay && (
-            <a
-              href={match.replay}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Replay
-            </a>
-          )}
-        </div>
-        <span>Winner: {match.winner || 'TBD'}</span>
-        {match.replay && <a href={match.replay} target="_blank" rel="noreferrer">Replay</a>}
+        {match.replays?.length
+          ? match.replays.map((replay, index) => (
+              <a key={replay} href={replay} target="_blank" rel="noreferrer">
+                Replay {index + 1}
+              </a>
+            ))
+          : match.replay && (
+              <a href={match.replay} target="_blank" rel="noreferrer">
+                Replay
+              </a>
+            )}
       </div>
     </div>
   );
@@ -197,11 +194,17 @@ function BracketMatch({ match }) {
 
         {match.winner && <span>Winner: {match.winner}</span>}
 
-        {match.replay && (
-          <a href={match.replay} target="_blank" rel="noreferrer">
-            Replay
-          </a>
-        )}
+        {match.replays?.length
+  ? match.replays.map((replay, index) => (
+      <a key={replay} href={replay} target="_blank" rel="noreferrer">
+        Replay {index + 1}
+      </a>
+    ))
+  : match.replay && (
+      <a href={match.replay} target="_blank" rel="noreferrer">
+        Replay
+      </a>
+    )}
       </div>
     </div>
   );
